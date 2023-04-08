@@ -7,31 +7,31 @@ author_profile: true
 
 <head>
     <style>
-        div.image-gallery {
-            display: block;
-            background-color: #cccccc;
+        .row {
+            display: flex;
           }
           
-          div.image-gallery img {
-            display: block;
-            float: left;
-          }
-          
-          .clear {
-            clear: both;
-            height: 0;
-            width: 0;
-            font-size: 1px;
-            line-height: 0;
+          .column {
+            flex: 33.33%;
+            padding: 5px;
           }
     </style>
 </head>
 
-<div class="image-gallery">
+<!-- <div class="image-gallery">
     <img src="/images/alfa.png">
     <img src="/images/pescarolo.png">
     <div class="clear"></div>
-</div>
+</div> -->
+
+<div class="row">
+    <div class="column">
+      <img src="/images/alfa.png" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="/images/pescarolo.png" style="width:100%">
+    </div>
+  </div>
 
 <!-- <ul class="image-gallery">
     <li><<img src="/images/alfa.png" alt=""></li>
