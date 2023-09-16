@@ -87,7 +87,7 @@ author:
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=XexBre4AAAAJ&hl=en"
-  cvlink           : "http://timhdesilva.github.io/files/cv.pdf"
+  # cvlink           : "http://timhdesilva.github.io/files/cv.pdf"
   email            : "timhdesilva@gmail.com"
   researchgate     : 
   uri              :
