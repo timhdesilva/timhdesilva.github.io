@@ -27,8 +27,10 @@ $times                      : Times, serif;
 $bodoni                     : "Bodoni MT", serif;
 $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
+$roboto-slab                : 'Roboto Slab', serif;
 
-$global-font-family         : $georgia;
+
+$global-font-family         : $roboto-slab;
 $header-font-family         : $global-font-family;
 $caption-font-family        : $global-font-family;
 $side-font                  : $global-font-family;
