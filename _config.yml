@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Tim de Silva"
 title_separator          : "-"
 name                     : &name "Tim de Silva"
-description              : &description "Ph.D Student at MIT Sloan"
+description              : &description "Ph.D Candidate at MIT Sloan"
 url                      : https://timhdesilva.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "timhdesilva/timhdesilva.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Tim de Silva"
   avatar           : "profile.png"
-  bio              : "Ph.D Student at MIT Sloan"
+  bio              : "Ph.D Candidate at MIT Sloan"
   location         : "Cambridge, MA"
   employer         :
   pubmed           : 
