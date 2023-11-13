@@ -5,6 +5,37 @@ title: ""
 author_profile: true
 ---
 
+
+<!-- These are your styles. Put these at the top of the template file. -->
+<style>
+    details > summary {
+    list-style: none;
+    background-color: hsl(0, 0%, 90%);
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details > summary::before {
+    content: '[+] ';
+    color: hsl(0, 0%, 50%)
+  }
+  
+  details[open] > summary::before {
+    content: '[\2212] '
+  }
+  details > p {
+    background-color: hsl(0, 0%, 92.5%);
+    width: fit-content;
+    max-width: 200px; /* change this to width of expanded text */
+  }
+  </style>
+  
+  
+<!-- CONTENT -->
 <h2 id="job-market-paper">Job Market Paper</h2>
 <p>
     Insurance versus Moral Hazard in Income-Contingent Student Loan Repayment <a style="text-decoration:none; color:rgb(177, 119, 48)" href="http://timhdesilva.github.io/files/papers/jmp_deSilva.pdf">[Paper]</a>
@@ -15,6 +46,10 @@ author_profile: true
     What Drives Investor&#39;s Portfolio Choices? Separating Risk Preferences from Frictions <a style="text-decoration:none; color:rgb(177, 119, 48)" href="http://timhdesilva.github.io/files/papers/preferences_frictions.pdf">[Paper]</a>
     <br>with <a style="text-decoration:none; color:rgb(177, 119, 48)" href="https://tahachoukhmane.com/">Taha Choukhmane</a>
     <br><em>Revise and Resubmit at the</em> <em>Journal of Finance</em>
+    <details>
+        <summary>Abstract</summary>
+        <p>TEST</p>
+    </details>
 </p>
 <p>
     Losing is Optional: Retail Option Trading and Expected Announcement Volatility <a style="text-decoration:none; color:rgb(177, 119, 48)" href="http://timhdesilva.github.io/files/papers/losing_optional.pdf">[Paper]</a> <a style="text-decoration:none; color:rgb(177, 119, 48)" href="http://timhdesilva.github.io/files/papers/losing_optional_appendix.pdf">[Internet Appendix]</a>
