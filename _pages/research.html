@@ -6,34 +6,47 @@ author_profile: true
 ---
 
 
-<!-- These are your styles. Put these at the top of the template file. -->
+
+<!-----------------------------------------------------------STYLES---------------------------------------------------------------->
 <style>
-    details > summary {
-    list-style: none;
-    background-color: hsl(0, 0%, 90%);
-    width: fit-content;
-    cursor: pointer;
-    user-select: none;
-  }
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
+    :root {
+      --abstract-button-gray: #f8f8f8;
+      --abstract-content-gray: #f1f1f1;
+    }
+    
+    .abstract-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px .5px;
+      margin: 0;
+      border: none;
+      background-color: var(--abstract-button-gray);
+      cursor: pointer;
+    }
+    
+    .abstract-button::before {
+      content: '[+]\00a0';
+      color: hsl(0, 0%, 50%);
+    }
+    
+    .abstract-button.active::before {
+      content: '[\2212]\00a0'
+    }
+    
+    .abstract-content {
+      width: 400px; /* Change this value to change the width of the content box */
+      background-color: var(--abstract-content-gray);
+      padding: 10px;
+      display: none;
+    }
+    
+    .abstract-content.show {
+      display: block;
+    }
+</style>
   
-  details > summary::before {
-    content: '[+] ';
-    color: hsl(0, 0%, 50%)
-  }
-  
-  details[open] > summary::before {
-    content: '[\2212] '
-  }
-  details > p {
-    background-color: hsl(0, 0%, 92.5%);
-    width: fit-content;
-    max-width: 200px; /* change this to width of expanded text */
-  }
-  </style>
-  
+
   
 <!-----------------------------------------------------------CONTENT---------------------------------------------------------------->
 
@@ -45,13 +58,13 @@ author_profile: true
 <h2 id="working-papers">Working Papers</h2>
 <p>
     <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/preferences_frictions.pdf">What Drives Investor&#39;s Portfolio Choices? Separating Risk Preferences from Frictions</a> 
-    <!-- <details>
-        <summary>Abstract</summary>
-        <p>TEST</p>
-    </details> -->
+    <button class="abstract-button" data-target="1">Abstract</button>
     <br>with <a style="text-decoration:none; color:gray" href="https://tahachoukhmane.com/">Taha Choukhmane</a>
     <br><em>Revise and Resubmit at the</em> <em>Journal of Finance</em>
 </p>
+<div id="1" class="abstract-content">
+    TEST
+</div>
 <p>
     <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/losing_optional.pdf">Losing is Optional: Retail Option Trading and Expected Announcement Volatility</a> <a style="text-decoration:none; color:rgb(177, 119, 48)" href="http://timhdesilva.github.io/files/papers/losing_optional_appendix.pdf">[Internet Appendix]</a>
     <br>with <a style="text-decoration:none; color:gray" href="https://mitmgmtfaculty.mit.edu/eso/">Eric C. So</a> and <a style="text-decoration:none; color:gray" href="https://ksmith142.github.io/">Kevin C. Smith</a>
@@ -93,3 +106,20 @@ author_profile: true
     Personal Debt and Entrepreneurial Risk-Taking
     <br>with <a style="text-decoration:none; color:gray" href="https://www.mayabidanda.com/home">Maya Bidanda</a>
 </p>
+
+
+
+<!-----------------------------------------------------------SCRIPTS---------------------------------------------------------------->
+<script>
+    const abstractButtons = document.querySelectorAll('.abstract-button')
+    
+    abstractButtons.forEach(abstractButton => {
+      abstractButton.addEventListener('click', (event) => {
+        const button = event.target
+        button.classList.toggle('active')
+        const abstractContentId = button.dataset.target
+        const abstractContent = document.getElementById(abstractContentId)
+        abstractContent.classList.toggle('show')
+      })
+    })
+</script>
