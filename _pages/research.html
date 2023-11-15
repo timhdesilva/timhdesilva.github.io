@@ -65,7 +65,7 @@ author_profile: true
     <br>with <a style="text-decoration:none; color:gray" href="https://tahachoukhmane.com/">Taha Choukhmane</a>
     <br><em>Revise and Resubmit at the</em> <em>Journal of Finance</em>
 </p>
-<div id="1" class="abstract-content">
+<div class="abstract-content">
     TEST
 </div>
 <p>
@@ -119,15 +119,16 @@ author_profile: true
 
 <!-----------------------------------------------------------SCRIPTS---------------------------------------------------------------->
 <script>
-    const abstractButtons = document.querySelectorAll('.abstract-button')
+    alert('Hello!');
+    const abstractButtons = document.querySelectorAll('.abstract-button');
     
-    abstractButtons.forEach(abstractButton => {
+    abstractButtons.forEach((abstractButton) => {
       abstractButton.addEventListener('click', (event) => {
-        const button = event.target
-        button.classList.toggle('active')
-        const abstractContentId = button.dataset.target
-        const abstractContent = document.getElementById(abstractContentId)
-        abstractContent.classList.toggle('show')
+        const button = event.target;
+        button.classList.toggle('active');
+        const abstractContentId = button.dataset.target;
+        const abstractContent = document.getElementById(abstractContentId);
+        abstractContent.classList.toggle('show');
       })
-    })
+    });
 </script>
