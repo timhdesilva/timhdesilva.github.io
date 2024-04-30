@@ -94,6 +94,17 @@ author_profile: true
   We document the growth of retail options trading and provide evidence that retail investors are drawn to options by anticipated spikes in volatility. Retail investors purchase options in a concentrated fashion before earnings announcements, particularly those with greater expected abnormal volatility. Comparing across asset markets, we also find retail investors disproportionately trade options over stocks as anticipated announcement volatility increases. In doing so, retail investors display a trio of wealth-depleting behaviors: they overpay for options relative to realized volatility, incur enormous bid-ask spreads, and sluggishly respond to announcements. These translate to retail losses of 5-to-9% on average, and 10-to-14% for high expected volatility announcements.
 </div>
 
+<p>
+  <a style="text-decoration:none; color:rgb(177, 119, 48); font-weight:bold" href="http://timhdesilva.github.io/files/papers/agnostic_dp.pdf">Model-Agnostic Dynamic Programming</a>
+  <br>with <a style="text-decoration:none; color:gray" href="https://economics.mit.edu/people/phd-students/marc-de-la-barrera-i-bardalet">Marc de la Barrera i Bardalet</a>
+  <br>
+    <button class="abstract-button" data-target="agnostic_dp" style="margin-top:8px">Abstract</button>
+    <a style="text-decoration:none; background-color:#f8f8f8; font-size: 16px; font-family: Roboto Slab, serif;" href="https://pypi.org/project/nndp/"><span style="color: gray;">[+]</span> <span style="color:black;">Software Package</span></a>
+</p>
+<div id="agnostic_dp" class="abstract-content">
+  Traditional dynamic programming requires a mathematical model of the transition function for the state vector. Leveraging reinforcement learning techniques, we develop a framework to solve dynamic optimization problems that does not require modeling the data-generating process (DGP) of exogenous states. Instead, the method samples realizations of these states directly from the data, allowing the modeler to be ``agnostic'' about the DGP. We apply our method to a canonical life cycle consumption-saving problem, solving the model without specifying the DGP for income. Using income data from the CPS, we find that the welfare loss from using a standard parametric income process relative to placing no restrictions on the DGP is small. We conclude by verifying that our method achieves a global optimum when given a known DGP and discussing directions for future work.
+</div>
+
 <h2 id="publications">Publications</h2>
 
 <p>
@@ -143,15 +154,6 @@ author_profile: true
 </p>
 <div id="inattention" class="abstract-content">
   We introduce the concept of selective inattention: agents in the economy selectively update their expectations about aggregate variables only when they make individual decisions for which these variables are relevant. Using a comprehensive set of household surveys, we show that households form expectations of macroeconomic variables that are more accurate, less dispersed, and closer to those of professional forecasters around periods in which they make important decisions, such as taking out a mortgage. These effects are larger for more consequential decisions and increase with proxies for financial sophistication. In ongoing work, we develop a consumption-savings model with durable and nondurable consumption, where agents can pay an observation cost to observe the return on a risky asset. In the model, agents exhibit selective inattention endogenously: they are more likely to pay the observation cost when adjusting durable consumption. This selective inattention has spillover effects on nondurable consumption and implies that the model can exhibit two features that have been difficult to reconcile jointly: a high level of macro-inattention, which refers to the sluggishness with which average expectations respond to shocks, and large responses of macro aggregates to shocks, in particular volatile durable goods spending.
-</div>
-
-<p>
-    <strong>Dynamic Programming via Reinforcement Learning</strong>
-    <br>with <a style="text-decoration:none; color:gray" href="https://economics.mit.edu/people/phd-students/marc-de-la-barrera-i-bardalet">Marc de la Barrera i Bardalet</a>
-    <br><button class="abstract-button" data-target="agnostic_dp" style="margin-top:8px">Abstract</button>
-</p>
-<div id="agnostic_dp" class="abstract-content">
-  Traditional dynamic programming requires a mathematical model of the state transition function. Using reinforcement learning techniques, we develop a framework that allows more general transition functions. The modeler does not need to know the transition function as long as it can simulate realizations of it or observe realizations from data. We apply it to the income fluctuations problem and show that our solution technique is able to learn the underlying data-generating process, achieving the same value as traditional methods. We then quantify the welfare loss of assuming the income process is an AR1 instead of using real income realizations.  
 </div>
 
 
