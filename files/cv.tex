@@ -7,11 +7,15 @@
 \definecolor{darkorange}{RGB}{200, 102, 0}
 \usepackage[colorlinks=true, linkcolor=darkorange, citecolor=darkorange, filecolor=darkorange, urlcolor=darkorange]{hyperref}
 \usepackage{needspace}
+\usepackage{array}
+\usepackage{longtable}
 \usepackage{mathpazo}
 \usepackage{tabu}
 \usepackage{charter} % Bitstream Charter Font
 
 \setlength{\parindent}{0cm} % Default is 15pt.
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
 
 \newcounter{mycounter}
 \setcounter{mycounter}{\theenumi}
@@ -19,8 +23,8 @@
 % Section of CV: \cvsec{name}
 \newcommand{\cvsec}[1]
 {
-	% Keep from breaking right after section. Adjust "2" to larger number if page is still breaking.
-	\needspace{2\baselineskip}
+	% Keep from breaking right after section. Adjust "4" to larger number if page is still breaking.
+	\needspace{4\baselineskip}
 	\noindent \textbf{#1}
 	
 	\vspace{2pt}
@@ -62,11 +66,11 @@
 \newenvironment{cvchrono}[1]
 {
 	\cvsec{#1}
-	% "6" below implies 6:1 ratio of text to dates. Change as needed.
-	\begin{tabu} to \linewidth {X[1,l]X[6,l]} 
+	% Breakable 1:6-ish date/text layout.
+	\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}@{\hspace{0.02\linewidth}}>{\raggedright\arraybackslash}p{0.82\linewidth}@{}}
 }
 {
-	\end{tabu}
+	\end{longtable}
 }
 	
 % Enumerated section environment: \begin{cvlist}{title} ... \end{cvlist}
