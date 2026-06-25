@@ -1,2 +1,9 @@
 _site/
 *.DS_Store
+
+# CV LaTeX build artifacts
+files/cv.aux
+files/cv.fdb_latexmk
+files/cv.fls
+files/cv.log
+files/cv.out
